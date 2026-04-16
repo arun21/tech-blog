@@ -123,16 +123,16 @@ export default function ListLayout({
             const { path, date, title, summary, tags } = post
             return (
               <li key={path}>
-                <article className="border-b border-gray-200 dark:border-gray-700 pb-6 hover:opacity-80 transition-opacity">
+                <article className="pb-6 transition-opacity hover:opacity-80 border-b border-gray-200 dark:border-gray-700">
                   <div className="space-y-3">
-                    {/* Post Title */}
                     <h3 className="text-xl leading-8 font-bold tracking-tight">
-                      <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400">
+                      <Link
+                        href={`/${path}`}
+                        className="hover:text-primary-500 dark:hover:text-primary-400 text-gray-900 dark:text-gray-100"
+                      >
                         {title}
                       </Link>
                     </h3>
-                    
-                    {/* Tags */}
                     {tags && tags.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {tags.map((tag) => (
@@ -140,15 +140,13 @@ export default function ListLayout({
                         ))}
                       </div>
                     )}
-                    
-                    {/* Summary */}
-                    <div className="prose max-w-none text-gray-600 dark:text-gray-400 line-clamp-2">
+                    <div className="line-clamp-2 max-w-none prose text-gray-600 dark:text-gray-400">
                       {summary}
                     </div>
-                    
-                    {/* Date */}
                     <div className="text-sm text-gray-500 dark:text-gray-500">
-                      <time dateTime={date}>Published on {formatDate(date, siteMetadata.locale)}</time>
+                      <time dateTime={date}>
+                        Published on {formatDate(date, siteMetadata.locale)}
+                      </time>
                     </div>
                   </div>
                 </article>
