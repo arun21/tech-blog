@@ -124,33 +124,39 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <ul>
+            <ul className="space-y-6">
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post
                 return (
-                  <li key={path} className="py-5">
-                    <article className="flex flex-col space-y-2 xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
-                          <time dateTime={date} suppressHydrationWarning>
-                            {formatDate(date, siteMetadata.locale)}
-                          </time>
-                        </dd>
-                      </dl>
+                  <li key={path}>
+                    <article className="border-b border-gray-200 dark:border-gray-700 pb-6 hover:opacity-80 transition-opacity">
                       <div className="space-y-3">
-                        <div>
-                          <h2 className="text-2xl leading-8 font-bold tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                        {/* Post Title */}
+                        <h2 className="text-xl leading-8 font-bold tracking-tight">
+                          <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400">
+                            {title}
+                          </Link>
+                        </h2>
+                        
+                        {/* Tags */}
+                        {tags && tags.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {tags.map((tag) => (
+                              <Tag key={tag} text={tag} />
+                            ))}
                           </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        )}
+                        
+                        {/* Summary */}
+                        <div className="prose max-w-none text-gray-600 dark:text-gray-400 line-clamp-2">
                           {summary}
+                        </div>
+                        
+                        {/* Date */}
+                        <div className="text-sm text-gray-500 dark:text-gray-500">
+                          <time dateTime={date} suppressHydrationWarning>
+                            Published on {formatDate(date, siteMetadata.locale)}
+                          </time>
                         </div>
                       </div>
                     </article>

@@ -19,8 +19,9 @@ export default function AuthorLayout({ children, content }: Props) {
             About
           </h1>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center space-x-2 pt-8">
+        <div className="items-start space-y-8 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0 pt-8 pb-8">
+          {/* Sidebar - Profile Card */}
+          <div className="flex flex-col items-center space-y-4">
             {avatar && (
               <Image
                 src={avatar}
@@ -30,18 +31,28 @@ export default function AuthorLayout({ children, content }: Props) {
                 className="h-48 w-48 rounded-full"
               />
             )}
-            <h3 className="pt-4 pb-2 text-2xl leading-8 font-bold tracking-tight">{name}</h3>
-            <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
-            <div className="text-gray-500 dark:text-gray-400">{company}</div>
-            <div className="flex space-x-3 pt-6">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="x" href={twitter} />
-              <SocialIcon kind="bluesky" href={bluesky} />
+            <div className="text-center">
+              <h3 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
+                {name}
+              </h3>
+              {occupation && (
+                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">{occupation}</div>
+              )}
+              {company && (
+                <div className="text-sm text-gray-600 dark:text-gray-400">{company}</div>
+              )}
+            </div>
+            {/* Social Links */}
+            <div className="flex space-x-4 pt-4">
+              {email && <SocialIcon kind="mail" href={`mailto:${email}`} />}
+              {github && <SocialIcon kind="github" href={github} />}
+              {linkedin && <SocialIcon kind="linkedin" href={linkedin} />}
+              {twitter && <SocialIcon kind="x" href={twitter} />}
+              {bluesky && <SocialIcon kind="bluesky" href={bluesky} />}
             </div>
           </div>
-          <div className="prose dark:prose-invert max-w-none pt-8 pb-8 xl:col-span-2">
+          {/* Main Content */}
+          <div className="prose dark:prose-invert max-w-none xl:col-span-2">
             {children}
           </div>
         </div>
