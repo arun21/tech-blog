@@ -19,7 +19,7 @@ export default function AuthorLayout({ children, content }: Props) {
             About
           </h1>
         </div>
-        <div className="pt-8 pb-8 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0 items-start space-y-8">
+        <div className="items-start space-y-8 pt-8 pb-8 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           {/* Sidebar - Profile Card */}
           <div className="flex flex-col items-center space-y-4">
             {avatar && (
