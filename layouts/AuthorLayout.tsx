@@ -19,7 +19,7 @@ export default function AuthorLayout({ children, content }: Props) {
             About
           </h1>
         </div>
-        <div className="items-start space-y-8 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0 pt-8 pb-8">
+        <div className="pt-8 pb-8 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0 items-start space-y-8">
           {/* Sidebar - Profile Card */}
           <div className="flex flex-col items-center space-y-4">
             {avatar && (
@@ -36,11 +36,9 @@ export default function AuthorLayout({ children, content }: Props) {
                 {name}
               </h3>
               {occupation && (
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">{occupation}</div>
+                <div className="mt-1 text-sm text-gray-600 dark:text-gray-400">{occupation}</div>
               )}
-              {company && (
-                <div className="text-sm text-gray-600 dark:text-gray-400">{company}</div>
-              )}
+              {company && <div className="text-sm text-gray-600 dark:text-gray-400">{company}</div>}
             </div>
             {/* Social Links */}
             <div className="flex space-x-4 pt-4">
@@ -52,9 +50,7 @@ export default function AuthorLayout({ children, content }: Props) {
             </div>
           </div>
           {/* Main Content */}
-          <div className="prose dark:prose-invert max-w-none xl:col-span-2">
-            {children}
-          </div>
+          <div className="prose dark:prose-invert max-w-none xl:col-span-2">{children}</div>
         </div>
       </div>
     </>

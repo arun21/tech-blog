@@ -123,7 +123,7 @@ export default function ListLayout({
             const { path, date, title, summary, tags } = post
             return (
               <li key={path}>
-                <article className="pb-6 transition-opacity hover:opacity-80 border-b border-gray-200 dark:border-gray-700">
+                <article className="border-b border-gray-200 pb-6 transition-opacity hover:opacity-80 dark:border-gray-700">
                   <div className="space-y-3">
                     <h3 className="text-xl leading-8 font-bold tracking-tight">
                       <Link
@@ -140,7 +140,7 @@ export default function ListLayout({
                         ))}
                       </div>
                     )}
-                    <div className="line-clamp-2 max-w-none prose text-gray-600 dark:text-gray-400">
+                    <div className="prose line-clamp-2 max-w-none text-gray-600 dark:text-gray-400">
                       {summary}
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-500">
