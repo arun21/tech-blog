@@ -1,0 +1,9 @@
+<figure class="text-center my-4">
+  <img src="{{ .Get "src" | relURL }}" 
+       alt="{{ .Get "alt" }}" 
+       class="img-fluid rounded shadow-sm" 
+       {{ if .Get "width" }}style="max-width: {{ .Get "width" }};"{{ end }}>
+  {{ if .Get "caption" }}
+    <figcaption class="text-muted small mt-2">{{ .Get "caption" }}</figcaption>
+  {{ end }}
+</figure>
