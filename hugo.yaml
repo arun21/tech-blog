@@ -126,8 +126,8 @@ params:
         # mastodon: true
 
     # Enable & configure "Notes" features
-    notes:
-      enable: false
+    # notes:
+    #   enable: false
 
     # Enable comment feature. There, should be only one of them.
     comment:
