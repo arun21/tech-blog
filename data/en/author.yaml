@@ -1,0 +1,20 @@
+# some information about you
+name: "Arun Prabhu"
+nickname: "Arun"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/arun.jpeg"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "arunprab21@gmail.com"
+  github: https://github.com/arun21
+  linkedin: https://www.linkedin.com/in/arun21/
+  researchgate: arun-prabhu
+
+# some summary about what you do
+summary:
+  - I am a Developer
+  - I am a Devops
+  - I love servers
+  - I work on open-source projects
+  - I love to work with some fun projects
