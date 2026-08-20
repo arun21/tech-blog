@@ -82,6 +82,11 @@ badges:
   url: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-ai-practitioner"
   badge: "https://images.credly.com/size/680x680/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png"
 
+- type: certification
+  name: Exam 98-381 - Microsoft Python Certification
+  url: "https://www.credly.com/badges/60b7b6b8-2892-4caf-bcf5-319c21491a71"
+  badge: "https://images.credly.com/size/680x680/images/0f467dff-9212-4684-9f74-44da8879e625/MTA-Introduction_to_Programming_Using_Python.png"
+
 - type: soft-skill-indicator
   name: Team Work
   percentage: 90
