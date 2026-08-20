@@ -1,0 +1,104 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Software Engineer
+# your company information
+company:
+  name: BMO.
+  url: "https://www.example.com"
+
+# your resume. this file path should be relative to you "static" directory
+# Dreprecated. Use resourceLinks instead.
+# resume: "files/resume.pdf"
+
+# a summary about you
+summary: 'I am a passionate software engineer with 8 years of working experience. I work on some fun projects such as writing a theme, etc. Another website: <a href="https://arun-prabhu.mystrikingly.com/" target="_blank">arun-prabhu strikingly website</a>'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "example@gmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/example"
+
+- name: Stackoverflow
+  icon: "fab fa-stack-overflow"
+  url: "#"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "#"
+
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "#"
+
+# - name: Facebook
+#   icon: "fab fa-facebook"
+#   url: "#"
+
+# - name: Mastadon
+#   icon: "fab fa-mastodon"
+#   url: "#"
+#   rel: "me noopener"
+
+- name: ResearchGate
+  icon: "fab fa-researchgate"
+  url: "https://www.researchgate.net/profile/john-doe"
+
+# You can put custom buttons to link your relevant resources.
+# For example, you can put link for your resume.
+resourceLinks:
+- title: "My Resume"
+  url: "files/resume.pdf"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+- type: certification
+  name: AWS Certified Solutions Architect – Associate
+  url: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate"
+  badge: "https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+
+- type: certification
+  name: Google Cloud Certified - Associate Cloud Engineer
+  url: "https://www.credly.com/org/google-cloud/badge/associate-cloud-engineer-certification"
+  badge: "https://images.credly.com/size/680x680/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png"
+
+- type: certification
+  name: AWS Certified AI Practitioner
+  url: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-ai-practitioner"
+  badge: "https://images.credly.com/size/680x680/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png"
+
+- type: certification
+  name: Exam 98-381 - Microsoft Python Certification
+  url: "https://www.credly.com/badges/60b7b6b8-2892-4caf-bcf5-319c21491a71"
+  badge: "https://images.credly.com/size/680x680/images/0f467dff-9212-4684-9f74-44da8879e625/MTA-Introduction_to_Programming_Using_Python.png"
+
+- type: soft-skill-indicator
+  name: Team Work
+  percentage: 90
+  color: yellow
+
+- type: soft-skill-indicator
+  name: Hard Working
+  percentage: 85
+  color: orange
+
+# you can also provide color code instead of the color name
+# - type: soft-skill-indicator
+#   name: Example 1
+#   percentage: 75
+#   color: "#00adb5"
