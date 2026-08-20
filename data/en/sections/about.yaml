@@ -73,6 +73,11 @@ badges:
   badge: "https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
 
 - type: certification
+  name: Google Cloud Certified - Associate Cloud Engineer
+  url: "https://www.credly.com/org/google-cloud/badge/associate-cloud-engineer-certification"
+  badge: "https://images.credly.com/size/680x680/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png"
+
+- type: certification
   name: AWS Certified AI Practitioner
   url: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-ai-practitioner"
   badge: "https://images.credly.com/size/680x680/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png"
